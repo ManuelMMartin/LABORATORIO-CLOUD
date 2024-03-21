@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { switchRoutes } from "./routes";
 import { GithubList } from "../components/GithubList/GithubList";
 import { MemberInfo } from "../components/GithubList/MemberInfo";
@@ -13,7 +13,7 @@ export const Rutas: React.FC = () => {
 
 
   return (<>
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <SearchProvider>
         <Routes>
@@ -24,7 +24,7 @@ export const Rutas: React.FC = () => {
           <Route path="*" element={<h4>404 Not found</h4>} />
         </Routes>
       </SearchProvider>
-    </BrowserRouter>
+    </HashRouter>
   </>
   );
 };
